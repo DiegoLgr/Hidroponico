@@ -3,10 +3,18 @@
 
 class Sensor
 {
+  public Sensor(int temperatura, int ec, int ph, int nivel_reservorio)
+  {
+    Temperatura=temperatura;
+    Ec=ec;
+    Ph=ph;
+    Nivel_reservorio=nivel_reservorio;
+  }
+  
   private:
     int temperatura;
-    int EC;
-    int PH;
+    int ec;
+    int ph;
     int nivel_reservorio;
 
   public:
@@ -15,5 +23,6 @@ class Sensor
     void set_nivel_reservorio(int nivel_reservorio);
     void set_PH(int ph);
     void actualizar_thingsboard(int temperatura, int ec, int ph, int nivel_reservorio);
+    
 };
 #endif
