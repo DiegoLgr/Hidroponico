@@ -1,6 +1,7 @@
 #ifndef _CUBETA
 #define _CUBETA
 #include "solenoide.h"
+#include "interfaz.h"
 
 
 class Cubeta_auxiliar {

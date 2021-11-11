@@ -1,2 +1,2 @@
 all:
-	g++ test_reservorio.cpp cubeta.cpp
+	g++ test_reservorio.cpp reservorio.cpp cubeta.cpp

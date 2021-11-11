@@ -4,6 +4,7 @@
 #include "interfaz.h"
 #include "cubeta.h"
 #include "solenoide.h"
+#include "reservorio.h"
 #include "sensor_nivel.h"
 
 #include <iostream>
@@ -16,7 +17,7 @@ int main(){
     auto cubeta = Cubeta_auxiliar(solenoide);
     auto notificador = Interfaz();
 
-    //auto reservorio = Reservorio(sensor_nivel_bajo, sensor_nivel_alto, cubeta, notificador);
+    auto reservorio = Reservorio(sensor_nivel_bajo, sensor_nivel_alto, cubeta);
 
     return 0;
 }
