@@ -8,20 +8,22 @@
 #include "interfaz.h"
 #include "sensor_nivel.h"
 
+enum Estados { BASE, RELLENANDO };
 class Reservorio {
     private:
-        enum Estados { base, rellenando };
-        Estados estado;
+        int estado;
         Cubeta_auxiliar cubeta;
         Interfaz notificador;
 	Sensor_nivel sensor_nivel_alto;
 	Sensor_nivel sensor_nivel_bajo;
+	bool nivel_alto;
+	bool nivel_bajo;
 
         void check_nivel(void);
 
     public:
-        Reservorio();
-        Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta, Interfaz notificador);
+        Reservorio(void);
+        Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta);
         void tick(int ms);
 };
 #endif
