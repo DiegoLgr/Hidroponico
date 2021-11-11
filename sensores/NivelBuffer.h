@@ -1,7 +1,7 @@
 #ifndef NIVELBUFFER_H
 #define NIVELBUFFER_H
 
-class Buffer
+class NivelBuffer
 {
 private:
     int pin;
