@@ -8,5 +8,5 @@ NivelBuffer::NivelBuffer(int pinNivelBuffer)
 
 int NivelBuffer::read()
 {
-  digitalRead(pin);
+  return digitalRead(pin);
 }

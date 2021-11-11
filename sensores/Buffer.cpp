@@ -1,25 +1,17 @@
 #include "Buffer.h"
-
+#include "TestBomba.h"
 // Date constructor
-Buffer::Buffer(float valmax, float valmin, Bomba bomba)
-{nivel_agua = 0;   
- valor_max = valmax;
- valor_min = valmin;
+Buffer::Buffer(TestBomba bomba)
+{
  bomba_reservorio = bomba;
 }
 
 void Buffer::falta_agua()
-{bomba.bombea_agua();
+{bomba_reservorio.act();
 }
 
-void Buffer::sobra_agua()
-{bomba.no_bombea_agua();
-}
-
-void Buffer::check(float nivel)
-{nivel_agua = nivel;
- if (nivel < nivel_agua)
+void Buffer::check(int nivel)
+{
+ if (nivel == 0)
    falta_agua();
- else if (nivel >nivel_agua)
-   sobra_agua();
 }

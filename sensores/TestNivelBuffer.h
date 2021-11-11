@@ -6,10 +6,9 @@ class TestNivelBuffer
 private:
     int pin;
     
-    int read():
 public:
     TestNivelBuffer(int pinNivelBuffer);
-     
+    int read();
 };
 
 #endif
