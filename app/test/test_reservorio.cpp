@@ -2,10 +2,10 @@
 #include "reservorio.h"
 */
 #include "interfaz.h"
-#include "cubeta.h"
+#include "../cubeta.h"
 #include "solenoide.h"
-#include "reservorio.h"
-#include "sensor_nivel.h"
+#include "../reservorio.h"
+#include "../sensor_nivel.h"
 
 #include <iostream>
 

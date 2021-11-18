@@ -3,27 +3,25 @@
 
 
 #include "cubeta.h"
-#include "reservorio.h"
-#include "solenoide.h"
-#include "interfaz.h"
-#include "sensor_nivel.h"
+#include "../actuadores/solenoide.h"
+#include "../notificador/notificador.h"
+#include "../sensores/sensor_nivel.h"
 
-enum Estados { BASE, RELLENANDO };
 class Reservorio {
+    enum Estados { BASE, RELLENANDO };
     private:
         Estados estado;
-        Cubeta_auxiliar cubeta;
+        Cubeta cubeta;
         Notificador notificador;
-	Sensor_nivel sensor_nivel_alto;
-	Sensor_nivel sensor_nivel_bajo;
-	bool nivel_alto;
-	bool nivel_bajo;
+        Sensor_nivel sensor_nivel_alto;
+        Sensor_nivel sensor_nivel_bajo;
+        bool nivel_alto;
+        bool nivel_bajo;
 
         void check_nivel(void);
 
     public:
-        Reservorio(void);
-        Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta, Notificador notificador);
+        Reservorio(Cubeta cubeta, Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Notificador notificador);
         void tick(int ms);
 };
 #endif

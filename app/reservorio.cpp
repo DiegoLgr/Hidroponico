@@ -1,20 +1,13 @@
 #include "reservorio.h"
 
 
-Reservorio::Reservorio(){
-            this->cubeta = cubeta;
-            this->notificador = Notificador();
-            this->sensor_nivel_alto = Sensor_nivel();
-            this->sensor_nivel_bajo = Sensor_nivel();
-	    this->nivel_alto = false;
-	    this->nivel_alto = true;
+
+Reservorio::Reservorio(Cubeta cubeta, Sensor_nivel snb, Sensor_nivel sna, Notificador notificador)
+        : cubeta{cubeta}, sensor_nivel_bajo{snb}, sensor_nivel_alto{sna}, notificador{notificador}
+{
+    this->check_nivel();
 }
-Reservorio::Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta, Notificador notificador){
-            this->cubeta = cubeta;
-            this->notificador = notificador;
-            this->sensor_nivel_alto = sensor_nivel_alto;
-            this->sensor_nivel_bajo = sensor_nivel_bajo;
-}
+
 
 void Reservorio::tick(int ms){
     this->check_nivel();

@@ -1,5 +1,14 @@
-Bomba::Bomba(int pin){ this.pin = pin; }
+#include "bomba.h"
+//#include <Arduino.h>
 
-Bomba::void bombea_agua(){ digital.write(pin, HIGHT); }
+Bomba::Bomba(int pin){ this->pin = pin; }
 
-Bomba::void no_bombea_agua(){ digital.write(pin, LOW); }
+void Bomba::on(){
+    //digital.write(pin, HIGHT);
+    printf("bomba on\n");
+}
+
+void Bomba::of(){
+    //digital.write(pin, LOW);
+    printf("bomba of\n");
+}
