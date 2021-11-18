@@ -27,8 +27,8 @@ class Sensor_nivel{
         Sensor_nivel(Sensor_nivel&& sn)
             :niveles{ 0, 0, 0, 1, 1, 1, 2, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 , 0 }
         {
-            idx = 4;
-            this->alto = sn.alto;
+            alto = sn.alto;
+            idx = sn.idx;
         }
 
         
