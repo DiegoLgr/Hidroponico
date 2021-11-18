@@ -11,9 +11,9 @@
 enum Estados { BASE, RELLENANDO };
 class Reservorio {
     private:
-        int estado;
+        Estados estado;
         Cubeta_auxiliar cubeta;
-        Interfaz notificador;
+        Notificador notificador;
 	Sensor_nivel sensor_nivel_alto;
 	Sensor_nivel sensor_nivel_bajo;
 	bool nivel_alto;
@@ -23,7 +23,7 @@ class Reservorio {
 
     public:
         Reservorio(void);
-        Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta);
+        Reservorio(Sensor_nivel sensor_nivel_bajo, Sensor_nivel sensor_nivel_alto, Cubeta_auxiliar cubeta, Notificador notificador);
         void tick(int ms);
 };
 #endif

@@ -7,8 +7,8 @@ Cubeta_auxiliar::Cubeta_auxiliar(void){ this->solenoide = solenoide; }
 
 void Cubeta_auxiliar::vierte(bool mas_agua){
     if (mas_agua){
-        solenoide.on();
+        solenoide.encender();
     } else {
-        solenoide.off();
+        solenoide.apagar();
     }
 }

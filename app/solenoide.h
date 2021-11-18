@@ -4,14 +4,26 @@
 
 
 class Solenoide {
+    private: 
+        int ms;
+
     public:
         Solenoide(void){}
-        void on(void){
+        void encender(void){
             printf("sol on\n");
         }
-        void off(void){
+        void encender(int ms){
+            this->ms = ms;
+            this->encender();
+        }
+        void apagar(void){
             printf("sol off\n");
         }
-
+        void tick(int ms){
+            this->ms -= ms;
+            if (this->ms <= 0){ this->apagar(); }
+        }
 };
+
+
 #endif
