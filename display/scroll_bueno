@@ -1,0 +1,32 @@
+#include <Wire.h>
+#include "rgb_lcd.h"
+
+rgb_lcd lcd;
+
+
+String msgScroll = "PH=7,EC=32,T=28C,NR=0,12";
+
+void setup() {
+  // put your setup code here, to run once:
+lcd.begin(16, 2);
+
+}
+void scrollText(int row, String message, int delayTime, int lcdColumns) {
+  for (int i=0; i < lcdColumns; i++) {
+    message = " " + message;  
+  } 
+  message = message + " "; 
+  for (int pos = 0; pos < message.length(); pos++) {
+    lcd.setCursor(0, row);
+    lcd.print(message.substring(pos, pos + lcdColumns));
+    delay(delayTime);
+  }
+}
+
+
+void loop() {
+  lcd.setCursor(0, 0);
+    lcd.print("ALARMA");
+  // put your main code here, to run repeatedly:
+    scrollText(1,msgScroll,250,16);
+}
