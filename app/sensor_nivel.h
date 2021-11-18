@@ -1,6 +1,8 @@
 #ifndef _SENSOR_NIVEL
 #define _SENSOR_NIVEL
 
+#include <iostream>
+
 
 class Sensor_nivel{
     private:
@@ -13,10 +15,18 @@ class Sensor_nivel{
             this->alto = alto;
         }
         bool read(void){
-            int nivel = niveles[i_niveles ++];
+            int nivel = this->niveles[this->i_niveles ++];
+
+	    if(this->alto){
+		    std::cout << "Sensor: Bajo lellendo " << nivel << "\n";
+	    } else {
+		    std::cout << "Sensor: Alto lellendo " << nivel << "\n";
+	    }
             if (this->alto && nivel == 2){
+	    std::cout << "Sensor: ¡¡ Alto !! " << "\n";
                 return true;
             } else if (!(this->alto) && nivel == 0) {
+		    std::cout << "Sensor: ¡¡ Bajo !! " << "\n";
                 return true;
             } else {
                 return false;

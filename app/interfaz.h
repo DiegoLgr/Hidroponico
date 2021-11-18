@@ -4,9 +4,9 @@
 
 
 
-class Interfaz {
+class Notificador {
     public:
-        Interfaz(){}
+        Notificador(){}
         void nivel_reservorio_bajo(void){
             printf("Alerta nivel bajo\n");
         }
