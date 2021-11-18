@@ -1,14 +1,12 @@
 #include "cubeta.h"
 
 
-Cubeta_auxiliar::Cubeta_auxiliar(Solenoide solenoide){ this->solenoide = solenoide; }
+Cubeta::Cubeta(Bomba bomba): bomba{bomba}{ }
 
-Cubeta_auxiliar::Cubeta_auxiliar(void){ this->solenoide = solenoide; }
-
-void Cubeta_auxiliar::vierte(bool mas_agua){
+void Cubeta::vierte(bool mas_agua){
     if (mas_agua){
-        solenoide.encender();
+        bomba.on();
     } else {
-        solenoide.apagar();
+        bomba.of();
     }
 }

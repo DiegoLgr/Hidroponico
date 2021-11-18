@@ -1,16 +1,16 @@
 #ifndef _CUBETA
 #define _CUBETA
-#include "solenoide.h"
-#include "interfaz.h"
+#include "../actuadores/bomba.h"
+#include "../notificador/notificador.h"
 
 
-class Cubeta_auxiliar {
+class Cubeta {
     private:
-        Solenoide solenoide;
+        Bomba bomba;
 
     public:
-        Cubeta_auxiliar();
-        Cubeta_auxiliar(Solenoide solenoide);
+        Cubeta();
+        Cubeta(Bomba bomba);
         void vierte(bool mas_agua);
 };
 #endif
