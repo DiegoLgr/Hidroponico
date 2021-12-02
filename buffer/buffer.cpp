@@ -16,7 +16,7 @@ void Buffer::tick(int nivel) {
 
     switch (this->estado){
         case (RELLENANDO):
-            if (!this->nivel_alto){
+            if (this->nivel_alto){
                 bomba.of();
                 this->estado = BASE;
             }

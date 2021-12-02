@@ -14,7 +14,7 @@ void Reservorio::tick(int ms){
 
     switch (this->estado){
         case (RELLENANDO):
-            if (!this->nivel_alto){
+            if (this->nivel_alto){
                 cubeta.vierte(false);
                 this->estado = BASE;
             }
