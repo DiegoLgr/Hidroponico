@@ -3,9 +3,9 @@
 
 
 #include "cubeta.h"
-#include "../actuadores/solenoide.h"
-#include "../notificador/notificador.h"
-#include "../sensores/sensor_nivel.h"
+#include "solenoide.h"
+#include "notificador.h"
+#include "sensor_nivel.h"
 
 class Reservorio {
     enum Estados { BASE, RELLENANDO };

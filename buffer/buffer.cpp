@@ -22,7 +22,7 @@ void Buffer::tick(int nivel) {
             }
             break;
         case(BASE): 
-            if (this->nivel_bajo){
+            if (this->!nivel_bajo){
                 bomba.on();
                 this->estado = RELLENANDO;
             }

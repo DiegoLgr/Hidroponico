@@ -20,7 +20,7 @@ void Reservorio::tick(int ms){
             }
             break;
         default: 
-            if (this->nivel_bajo){
+            if (this->!nivel_bajo){
                 cubeta.vierte(true);
                 this->estado = RELLENANDO;
                 this->notificador.nivel_reservorio_bajo();

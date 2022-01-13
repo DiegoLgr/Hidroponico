@@ -1,7 +1,7 @@
 #ifndef _CUBETA
 #define _CUBETA
-#include "../actuadores/bomba.h"
-#include "../notificador/notificador.h"
+#include "bomba.h"
+#include "notificador.h"
 
 
 class Cubeta {

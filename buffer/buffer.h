@@ -1,8 +1,8 @@
 #ifndef BUFFER_H
 #define BUFFER_H
 
-#include "../actuadores/bomba.h"
-#include "../sensores/sensor_nivel.h"
+#include "bomba.h"
+#include "sensor_nivel.h"
 
 
 
